@@ -58,7 +58,7 @@ export default function Home() {
                         >
                             <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/50">
                                 <img
-                                    src="/kite.jpg"
+                                    src="/image/About.png"
                                     alt="KGiSL Campus"
                                     className="w-full h-full object-cover"
                                     referrerPolicy="no-referrer"

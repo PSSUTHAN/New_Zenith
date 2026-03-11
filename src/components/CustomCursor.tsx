@@ -8,6 +8,25 @@ export default function CustomCursor() {
   const cursorX = useSpring(0, { damping: 20, stiffness: 250 });
   const cursorY = useSpring(0, { damping: 20, stiffness: 250 });
 
+  // device pixel ratio. we'll use it to render the cursor at
+  // device pixels but keep the on‑screen size the same as before.
+  const [dpr, setDpr] = useState(() =>
+    typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1
+  );
+
+  // base sizes (in CSS pixels) for the dot and outer ring. bump these up
+  // if you want a larger pointer overall.
+  const BASE_DOT = 4;      // previously 2
+  const BASE_RING = 20;    // previously 8
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDpr(window.devicePixelRatio || 1);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
@@ -45,20 +64,24 @@ export default function CustomCursor() {
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] hidden md:block">
       {/* Main Dot */}
+      {/* dot: render in device pixels but scale back so physical size stays BASE_DOT */}
       <motion.div
         style={{
           x: cursorX,
           y: cursorY,
           translateX: "-50%",
           translateY: "-50%",
+          width: BASE_DOT * dpr,
+          height: BASE_DOT * dpr,
+          scale: 1 / dpr,
         }}
-        className="w-2 h-2 bg-amber-500 rounded-full fixed"
+        className="bg-amber-500 rounded-full fixed"
       />
       
       {/* Outer Circle */}
       <motion.div
         animate={{
-          scale: isHovering ? 2.5 : 1,
+          scale: (isHovering ? 2.5 : 1) * (1 / dpr),
           opacity: isHovering ? 0.5 : 1,
           borderWidth: isHovering ? "1px" : "2px",
         }}
@@ -67,8 +90,10 @@ export default function CustomCursor() {
           y: cursorY,
           translateX: "-50%",
           translateY: "-50%",
+          width: BASE_RING * dpr,
+          height: BASE_RING * dpr,
         }}
-        className="w-8 h-8 border-2 border-amber-500/50 rounded-full fixed transition-colors duration-300"
+        className="border-amber-500/50 rounded-full fixed transition-colors duration-300"
       />
 
       {/* Radar Pulse (only on hover) */}
@@ -82,8 +107,11 @@ export default function CustomCursor() {
             y: cursorY,
             translateX: "-50%",
             translateY: "-50%",
+            width: BASE_RING * dpr,
+            height: BASE_RING * dpr,
+            scale: 1 / dpr,
           }}
-          className="w-8 h-8 border border-amber-500 rounded-full fixed"
+          className="border-amber-500 rounded-full fixed"
         />
       )}
     </div>

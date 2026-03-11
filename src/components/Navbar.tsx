@@ -82,12 +82,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Link
-            to="/#registration"
-            className="px-5 py-2.5 bg-amber-500 text-slate-100 text-sm font-bold rounded-xl hover:bg-amber-600 transition-all hover:scale-105 shadow-lg shadow-cyan-500/20"
-          >
-            Register
-          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -125,13 +119,7 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <Link
-                to="/#registration"
-                className="w-full py-4 bg-amber-500 text-slate-100 text-center font-bold rounded-xl"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Register Now
-              </Link>
+
             </div>
           </motion.div>
         )}

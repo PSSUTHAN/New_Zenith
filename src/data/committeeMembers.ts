@@ -42,7 +42,7 @@ export const committeeMembers: CommitteeMember[] = [
         image: "/Team/Mr-Sureshkumar-C.webp",
     },
     {
-        name: "Prof. Kamalakannan",
+        name: "Prof. R.Kamalakannan",
         role: "Department of CYS",
         group: "Staff Coordinators",
         image: "/Team/Mr-Kamalakkannan-R.webp",
