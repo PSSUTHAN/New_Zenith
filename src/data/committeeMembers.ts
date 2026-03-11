@@ -22,7 +22,7 @@ export const committeeMembers: CommitteeMember[] = [
         image: "/Team/Dr-Nirmaladevi-J.webp",
     },
     {
-        name: "Dr. Joel Anandraj E",
+        name: "Mr. Joel Anandraj E",
         role: "CYS",
         group: "Head of Department",
         image: "/Team/Mr-Joel-Anandraj-E.webp",
@@ -52,7 +52,7 @@ export const committeeMembers: CommitteeMember[] = [
         name: "K.Parvinkumar",
         role: "Department of IT",
         group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Parvin&backgroundColor=6d28d9&textColor=ffffff",
+        image: "/Team/Parvin.png",
     },
 
     {

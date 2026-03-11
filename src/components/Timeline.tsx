@@ -13,37 +13,37 @@ const schedule: TimelineItem[] = [
     {
     time: "09:00 AM",
     title: "Inauguration Ceremony",
-    description: "Official commencement of Zenith 2k26 with our chief guests.",
+    description: "Official commencement of Zenith 2k26 with our chief guests",
     status: "upcoming",
   },
   {
     time: "10.00 AM",
     title: "Technical Events",
-    description: "Indrudex45, UI Matrix, Prompt to Pick and Rev Arena.",
+    description: "Intrudex45, UI Matrix, Prompt to Pick and Rev Arena",
     status: "upcoming",
   },
   {
     time: "12:30 PM",
     title: "Lunch",
-    description: "Enjoy a delicious lunch and connect with fellow participants.",
+    description: "Enjoy a delicious lunch and connect with fellow participants",
     status: "upcoming",
   },
   {
     time: "01:30 PM",
     title: "Non-Technical",
-    description: "E-Sports, IPL Auction, Chess and Spot and Solve.",
+    description: "E-Sports, IPL Auction, Chess and Spot and Solve",
     status: "upcoming",
   },
   {
     time: "03.15 PM",
     title: "Fun Events",
-    description: "Find the Song.",
+    description: "Find the Song",
     status: "upcoming",
   },
   {
     time: "03:45 PM",
     title: "Prize Distribution",
-    description: "Prize distribution and closing remarks.",
+    description: "Prize distribution and closing remarks",
     status: "upcoming",
   },
 ];

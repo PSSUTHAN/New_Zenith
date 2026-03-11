@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 mb-6 sm:mb-8 md:mb-10 leading-relaxed px-2 sm:px-0">
-            <div>Where IT innovation, AI intelligence and Cyber Security unite </div>
+            <div>Where IT Innovation, AI Intelligence and Cyber Security unite </div>
                   A celebration of technology, creativity and excellence.
           </p>
 

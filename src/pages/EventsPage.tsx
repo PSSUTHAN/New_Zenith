@@ -178,7 +178,8 @@ export default function EventsPage() {
                 {/* Spacer so content clears the fixed tab bar (~48px on mobile, 64px on larger) */}
                 <div className="h-12 sm:h-16" />
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-[1400px] py-10 sm:py-16 lg:py-24">
+                {/* remove extra top padding so category title isn't pushed down */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-[1400px] pt-0 pb-10 sm:pb-16 lg:pb-24">
 
 
                     {/* Events List */}

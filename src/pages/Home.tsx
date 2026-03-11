@@ -114,7 +114,7 @@ export default function Home() {
 
                             {/* Description */}
                             <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-7">
-                                Explore <span className="text-amber-400 font-semibold">8+ events</span> across Technical, Non-Technical, and Fun categories —
+                                Explore <span className="text-amber-400 font-semibold">events</span> across Technical, Non-Technical and Fun categories —
                                 from web development to gaming and chess championships.
                             </p>
 
@@ -160,7 +160,7 @@ export default function Home() {
                         className="max-w-4xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-8 border-cyan-800"
                     >
                         <img
-                            src="/Posters/common.jpeg"
+                            src="/Posters/General-Final.jpeg"
                             alt="Zenith 2k26 Official Poster"
                             className="w-full h-auto transition-all duration-700"
                             referrerPolicy="no-referrer"
@@ -209,7 +209,7 @@ export default function Home() {
                                 </div>
                                 <div className="p-4 sm:p-6 bg-cyan-950 rounded-xl sm:rounded-2xl border border-cyan-800 shadow-md shadow-black/40">
                                     <p className="text-slate-500 text-xs sm:text-sm mb-2 uppercase tracking-wider">Last Date</p>
-                                    <p className="text-xl sm:text-2xl font-bold text-slate-100">22nd March</p>
+                                    <p className="text-xl sm:text-2xl font-bold text-slate-100">23rd March</p>
                                 </div>
                                 <div className="p-4 sm:p-6 bg-cyan-950 rounded-xl sm:rounded-2xl border border-cyan-800 shadow-md shadow-black/40 sm:col-span-2 md:col-span-1">
                                     <p className="text-slate-500 text-xs sm:text-sm mb-2 uppercase tracking-wider">On-Spot</p>
@@ -225,7 +225,7 @@ export default function Home() {
                                 className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
                             >
                                 <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfcAEgGAK4hzb6sBqy6F-cB9-yOndYrjvXFfHc-vazbtyqsEA/viewform?usp=publish-editor"
+                                    href="https://forms.gle/Nm7kgbCik95WkHBi8"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-amber-500 text-slate-100 font-bold rounded-xl sm:rounded-2xl hover:bg-amber-600 transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 text-sm sm:text-base"
@@ -280,7 +280,7 @@ export default function Home() {
                                     Saravanampatti, Coimbatore – 641035
                                 </address>
                                 <a
-                                    href="/kite.jpg"
+                                    href="https://www.google.com/maps/place/KGiSL+Institute+of+Technology+(Autonomous)/@11.0809615,76.9957482,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f792636f82b5:0xdc86449e9fb48675!8m2!3d11.0809615!4d76.9983231!16s%2Fm%2F0ztb1by?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-slate-100 rounded-xl hover:bg-amber-600 transition-colors text-sm font-bold shadow-lg shadow-cyan-500/20"

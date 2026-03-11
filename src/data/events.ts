@@ -14,6 +14,7 @@ const defaultCoordinators = [
 ];
 
 export const technicalEvents: EventDetails[] = [
+  // Intrudex45
  {
   title: "INTRUDEX45",
   shortName: "Intrudex45",
@@ -28,7 +29,7 @@ export const technicalEvents: EventDetails[] = [
   "INTRUDEX45 – Rapid Model Development Challenge is a technical competition designed to test participants’ strategic thinking and machine learning implementation skills. Teams first participate in a dataset auction where they bid using virtual credits to acquire a dataset. After securing a dataset, teams must quickly preprocess the data, select an appropriate machine learning model, train it, and generate performance metrics within a limited time. The event evaluates participants’ ability to make strategic decisions, build efficient models, and explain their approach effectively.",
 
   image: "/image/Indrudex.png",
-  posterImage: "/Posters/Indrudex.jpeg",
+  posterImage: "/Posters/Intrudex45.jpeg",
   altText: "Machine learning model development challenge",
 
   rounds: [
@@ -53,7 +54,7 @@ export const technicalEvents: EventDetails[] = [
     "Judges’ decisions will be final."
   ],
 
-  coordinators: [{ name: "Vignesh K", role: "Coordinator", phone: "+91 7695968502" }, { name: "Ranjith Kumar K", role: "Coordinator", phone: "+91 979190758" }], documentUrl: "/Indrudex-45.pdf"
+  coordinators: [{ name: "Vignesh K", role: "Coordinator", phone: "+91 7695968502" }, { name: "Ranjith Kumar K", role: "Coordinator", phone: "+91 979190758" }], documentUrl: "/INTRUDEX45.pdf"
 },
 
 
@@ -106,7 +107,7 @@ export const technicalEvents: EventDetails[] = [
     description: "Prompt to Pick is an AI prompt engineering competition where participants design effective prompts to generate accurate and creative AI outputs.",
     fullDescription: "Prompt to Pick is an interactive competition that tests participants creativity and skills in AI prompt engineering. The event has two rounds: the first focuses on creating a structured prompt using given elements such as topic, audience, format, and tone, while the second requires participants to generate an AI image similar to a reference image using a descriptive prompt. The competition helps participants improve creative thinking, prompt design, and effective communication with AI tools.",
     image: "/image/P2P.png",
-    posterImage: "/Posters/p2p.jpeg", // 👈 Replace with your actual poster file
+    posterImage: "/Posters/Prompt to pick.jpeg", // 👈 Replace with your actual poster file
     altText: "Illustration representing debugging",
     rounds: [{
       name: "Round 1  Prompt Puzzle",
@@ -231,7 +232,7 @@ export const nonTechnicalEvents: EventDetails[] = [
       "Spot and Solve is an image-based Open Source Intelligence (OSINT) challenge where participants examine real-world images to extract visual clues and answer location-based questions. Using publicly available tools, AI platforms, maps, and search engines, participants must identify locations, landmarks, coordinates, and time of day from the images. The event tests visual intelligence, analytical thinking, and online research skills while encouraging participants to apply logical reasoning and investigative techniques.",
 
     image: "/image/Spot and Solve.jpeg",
-    posterImage: "/Posters/spotand solve.jpeg", // 👈 Replace with your actual poster file
+    posterImage: "/Posters/Spot And Solve.jpeg", // 👈 Replace with your actual poster file
     altText: "Visual clue analysis and location identification concept",
 
     rounds: [
@@ -299,6 +300,7 @@ export const nonTechnicalEvents: EventDetails[] = [
     coordinators: [{ name: "Hanish", role: "Coordinator", phone: "+91 8248421320" }, { name: "ParvinKumar K", role: "Coordinator", phone: "+91 7010910428" }], documentUrl: "/Chess_zenith.pdf"
   },
     {
+      // Chess
     title: "IPL Auction",
     shortName: "IPL Auction",
     category: "Fun",
@@ -341,12 +343,13 @@ rules: [
   "Unfair practices or cheating will lead to disqualification.",
   "The organizers' decision will be final."
 ],
-    coordinators: [{ name: "Muthu Kumar", role: "Coordinator", phone: "+91 9043625680" }, { name: "Mukil Kumar", role: "Coordinator", phone: "+91 8248372754" }], documentUrl: "/IPL_AUCTION.pdf"
+    coordinators: [{ name: "Muthu Kumar", role: "Coordinator", phone: "+91 9043625680" }, { name: "Mukil Kumar", role: "Coordinator", phone: "+91 8248372754" }], documentUrl: "/IPL AUCTION.pdf"
   },
 ];
 
 export const funEvents: EventDetails[] = [
   {
+    // find the song
   title: "Find the Song",
   shortName: "Find the Song",
   category: "Fun",
@@ -360,7 +363,7 @@ export const funEvents: EventDetails[] = [
   "Find the Song is an exciting music quiz where participants listen to short audio clips and identify the song title, movie name, or singer associated with the clip. The clips may include instrumental music, background tunes, or short lyric segments. Participants must rely on their listening skills, memory, and quick thinking to recognize the songs. The event tests musical knowledge, attention to detail, and speed of identification.",
 
   image: "/image/Find the song.png",
-  posterImage: "/Posters/Find the song.jpeg",
+  posterImage: "/Posters/Find the Song.jpeg",
   altText: "Music quiz and song identification challenge",
 
   rounds: [
