@@ -30,7 +30,7 @@ export default function CommitteeSection() {
             <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] bg-amber-500/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[130px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] md:w-[600px] h-[250px] sm:h-[350px] md:h-[400px] bg-cyan-500/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[130px] pointer-events-none" />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+            <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 relative z-10">
 
                 {/* Section Header */}
                 <motion.div

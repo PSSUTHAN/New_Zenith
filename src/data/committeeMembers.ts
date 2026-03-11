@@ -8,82 +8,71 @@ export interface CommitteeMember {
 export const committeeMembers: CommitteeMember[] = [
     // Principal
     {
-        name: "Dr. R. Kumar",
+        name: "Dr. S. Suresh Kumar",
         role: "Principal",
         group: "Principal",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=R.%20Kumar&backgroundColor=b45309&textColor=ffffff",
+        image: "/Team/Principal.webp",
     },
 
     // HOD
     {
-        name: "Dr. S. Lakshmi",
-        role: "Head of Department",
+        name: "Dr. NirmalaDevi J",
+        role: "IT & AIML",
         group: "Head of Department",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=S.%20Lakshmi&backgroundColor=0891b2&textColor=ffffff",
+        image: "/Team/Dr-Nirmaladevi-J.webp",
+    },
+    {
+        name: "Dr. Joel Anandraj E",
+        role: "CYS",
+        group: "Head of Department",
+        image: "/Team/Mr-Joel-Anandraj-E.webp",
     },
 
     // Staff Coordinators
     {
-        name: "Prof. Shirley Josephine",
-        role: "Staff Coordinator",
+        name: "Prof. R.Shirley",
+        role: "Department of AIML",
         group: "Staff Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Shirley%20Josephine&backgroundColor=0e7490&textColor=ffffff",
+        image: "/Team/Ms-Shirley-Josephine-Mary-R.webp",
     },
     {
-        name: "Prof. Arun Kumar",
-        role: "Staff Coordinator",
+        name: "Prof. C.Suresh Kumar",
+        role: "Department of IT",
         group: "Staff Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Arun%20Kumar&backgroundColor=0e7490&textColor=ffffff",
+        image: "/Team/Mr-Sureshkumar-C.webp",
     },
     {
-        name: "Prof. Meena Devi",
-        role: "Staff Coordinator",
+        name: "Prof. Kamalakannan",
+        role: "Department of CYS",
         group: "Staff Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Meena%20Devi&backgroundColor=0e7490&textColor=ffffff",
+        image: "/Team/Mr-Kamalakkannan-R.webp",
     },
-    {
-        name: "Prof. Karthik Raj",
-        role: "Staff Coordinator",
-        group: "Staff Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Karthik%20Raj&backgroundColor=0e7490&textColor=ffffff",
-    },
-
     // Student Coordinators
     {
-        name: "Parvin",
-        role: "Student Coordinator",
+        name: "K.Parvinkumar",
+        role: "Department of IT",
         group: "Student Coordinators",
         image: "https://api.dicebear.com/9.x/initials/svg?seed=Parvin&backgroundColor=6d28d9&textColor=ffffff",
     },
+
     {
-        name: "Ajay Kumar",
-        role: "Student Coordinator",
+        name: "Mega Varshini",
+        role: "Department of IT",
         group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Ajay%20Kumar&backgroundColor=6d28d9&textColor=ffffff",
+        image: "/Team/mega.png",
+    },
+   
+    {
+        name: "S.Sri Vatsan",
+        role: "Department of AIML",
+        group: "Student Coordinators",
+        image: "/Team/Vatsan.png",
     },
     {
-        name: "Priya S",
-        role: "Student Coordinator",
+        name: "S.Prasanth",
+        role: "Department of CYS",
         group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Priya%20S&backgroundColor=6d28d9&textColor=ffffff",
-    },
-    {
-        name: "Rahul M",
-        role: "Student Coordinator",
-        group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Rahul%20M&backgroundColor=6d28d9&textColor=ffffff",
-    },
-    {
-        name: "Keerthana R",
-        role: "Student Coordinator",
-        group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Keerthana%20R&backgroundColor=6d28d9&textColor=ffffff",
-    },
-    {
-        name: "Divya K",
-        role: "Student Coordinator",
-        group: "Student Coordinators",
-        image: "https://api.dicebear.com/9.x/initials/svg?seed=Divya%20K&backgroundColor=6d28d9&textColor=ffffff",
+        image: "/Team/Prasanth.png",
     },
 ];
 

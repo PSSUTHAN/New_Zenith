@@ -14,10 +14,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply font-sans bg-cyan-950 text-slate-100;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -34,4 +46,18 @@
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-cyan-500;
+}
+
+/* Custom scrollbar for modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-cyan-950;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-cyan-800 rounded-full;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyan-600;
 }

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { X, Users, Phone, FileText, Download, ScrollText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +21,8 @@ export interface EventDetails {
     category: string;
     participants: number | string;
     description: string;
-    image?: string;
+    image?: string;          // background / card image
+    posterImage?: string;   // dedicated event poster shown in modal (your custom poster)
     altText?: string;
     format: string;
     fullDescription?: string;
@@ -46,6 +48,13 @@ const staggerContainer = {
 const fadeUp = {
     hidden: { opacity: 0, y: 15 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+};
+
+// helper to truncate text by words
+const truncateWords = (text: string, count: number) => {
+    const words = text.split(/\s+/);
+    if (words.length <= count) return text;
+    return words.slice(0, count).join(" ") + "...";
 };
 
 export default function EventModal({ event, onClose }: EventModalProps) {
@@ -104,27 +113,28 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                             transition={{ duration: 0.45, delay: 0.15 }}
                             className="lg:w-[40%] shrink-0 flex flex-col gap-4 p-5 sm:p-8 lg:border-r border-cyan-800"
                         >
-                            {/* Poster image */}
-                            <div className="overflow-hidden rounded-xl border border-white/10 shadow-lg shadow-black/40 group">
-                                {event.image ? (
+                            {/* Poster image — uses posterImage if set, falls back to image */}
+                            {(event.posterImage || event.image) ? (
+                                /* Wrapper scales on hover — no overflow-hidden here so nothing gets cropped */
+                                <div className="rounded-xl border border-white/10 shadow-lg shadow-black/40 transition-transform duration-500 ease-out hover:scale-[1.04] hover:shadow-2xl hover:shadow-black/60 cursor-zoom-in">
                                     <img
-                                        src={event.image}
+                                        src={event.posterImage || event.image}
                                         alt={event.altText || event.title}
-                                        className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-auto block rounded-xl"
                                     />
-                                ) : (
-                                    /* Placeholder when no image is provided */
-                                    <div className="w-full aspect-[3/4] flex flex-col items-center justify-center bg-cyan-900/40 rounded-xl text-slate-500 gap-3">
-                                        <FileText className="w-12 h-12 opacity-30" />
-                                        <span className="text-xs uppercase tracking-widest opacity-40">No Poster</span>
-                                    </div>
-                                )}
-                            </div>
+                                </div>
+                            ) : (
+                                /* Placeholder when no poster is provided */
+                                <div className="aspect-[3/4] flex flex-col items-center justify-center bg-cyan-900/40 rounded-xl border border-white/10 text-slate-500 gap-3">
+                                    <FileText className="w-12 h-12 opacity-30" />
+                                    <span className="text-xs uppercase tracking-widest opacity-40">No Poster</span>
+                                </div>
+                            )}
 
                             {/* Download Poster button */}
-                            {event.image && (
+                            {(event.posterImage || event.image) && (
                                 <a
-                                    href={event.image}
+                                    href={event.posterImage || event.image}
                                     download
                                     className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-black font-semibold rounded-xl transition-all duration-200 shadow-[0_0_18px_rgba(245,158,11,0.25)] hover:shadow-[0_0_28px_rgba(245,158,11,0.45)] text-sm"
                                 >
@@ -144,8 +154,8 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                             {/* Description */}
                             <motion.div variants={fadeUp} className="space-y-2">
                                 <h3 className="text-[10px] sm:text-xs font-bold text-amber-500 uppercase tracking-widest">About</h3>
-                                <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                                    {event.fullDescription || event.description}
+                                <p className="text-slate-300 font-serif leading-relaxed text-sm sm:text-base text-justify">
+                                    {truncateWords(event.fullDescription || event.description, 50)}
                                 </p>
                             </motion.div>
 
@@ -229,13 +239,13 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                                         Get Event Details
                                     </a>
                                 )}
-                                <a
-                                    href="#registration"
+                                <Link
+                                    to="/#registration"
                                     onClick={onClose}
                                     className="flex-1 px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition-all hover:scale-[1.02] shadow-[0_0_24px_rgba(245,158,11,0.3)] text-xs sm:text-sm text-center"
                                 >
                                     Register Now →
-                                </a>
+                                </Link>
                             </motion.div>
                         </motion.div>
                     </div>

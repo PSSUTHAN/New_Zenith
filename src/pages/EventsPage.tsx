@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from "motion/react";
 import { Code, Gamepad2, Smile } from "lucide-react";
 
 import EventModal, { EventDetails } from "../components/EventModal";
+
+// utility: return first `count` words of text with ellipsis if truncated
+const truncateWords = (text: string, count: number) => {
+    const words = text.split(/\s+/);
+    if (words.length <= count) return text;
+    return words.slice(0, count).join(" ") + "...";
+};
 import { technicalEvents, nonTechnicalEvents, funEvents } from "../data/events";
 
 type CategoryKey = "Technical" | "Non-Technical" | "Fun";
@@ -64,11 +71,11 @@ const EventRow = ({
 
             {/* Image */}
             <div className="w-full lg:w-5/12 relative group z-10">
-                <div className="relative aspect-[4/3] w-full rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden bg-[#0A0F1C] border-2 sm:border-[3px] border-white/80 shadow-lg sm:shadow-2xl shadow-black/60 group-hover:border-white transition-all duration-300">
+                <div className="relative w-full rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden bg-[#0A0F1C] border-2 sm:border-[3px] border-white/80 shadow-lg sm:shadow-2xl shadow-black/60 group-hover:border-white transition-all duration-300">
                     <img
                         src={event.image}
                         alt={event.altText || event.title}
-                        className="w-full h-full object-cover opacity-60 group-hover:opacity-85 transition-opacity duration-700 mix-blend-lighten"
+                        className="w-full h-auto object-contain opacity-60 group-hover:opacity-85 transition-opacity duration-700 mix-blend-lighten"
                         crossOrigin="anonymous"
                     />
                     {/* Bottom gradient fade */}
@@ -82,14 +89,10 @@ const EventRow = ({
                     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold text-slate-100 leading-tight tracking-tight">
                         {event.title}
                     </h3>
-                    {event.shortName && event.shortName !== event.title && (
-                        <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-200 mt-2 font-display">
-                            + {event.shortName}.
-                        </h4>
-                    )}
+
                 </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 leading-relaxed font-light max-w-2xl">
-                    {event.fullDescription || event.description}
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 font-serif leading-relaxed font-light max-w-2xl text-justify">
+                    {truncateWords(event.fullDescription || event.description, 25)}
                 </p>
                 <div className="pt-2">
                     <button
@@ -111,13 +114,13 @@ export default function EventsPage() {
     const currentCat = categories.find((c) => c.key === activeCategory)!;
 
     return (
-        <div className="pt-24 min-h-screen relative overflow-hidden bg-transparent">
+        <div className="pt-20 sm:pt-24 min-h-screen relative overflow-hidden bg-transparent">
             {/* Ambient lights */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/40 via-cyan-950/0 to-transparent rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen" />
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[1000px] h-[400px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-900/30 via-cyan-950/0 to-transparent rounded-full blur-[120px] pointer-events-none z-0" />
 
             <section id="events" className="relative z-10">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-[1400px] pt-4 sm:pt-6 pb-4 sm:pb-6 md:pb-8">
+                <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 max-w-[1400px] pt-4 sm:pt-6 pb-4 sm:pb-6 md:pb-8">
                     {/* Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -143,9 +146,9 @@ export default function EventsPage() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="fixed top-16 sm:top-18 md:top-20 left-0 right-0 z-40 backdrop-blur-md bg-[#0A0F1C]/80 border-b border-white/10 py-3 sm:py-4 overflow-x-auto"
+                    className="fixed top-14 sm:top-16 md:top-20 left-0 right-0 z-40 backdrop-blur-md bg-[#0A0F1C]/80 border-b border-white/10 py-2 sm:py-3 md:py-4 overflow-x-auto"
                 >
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-[1400px] min-w-full">
+                    <div className="container mx-auto px-3 sm:px-6 lg:px-12 max-w-[1400px]">
                         <div className="flex gap-2 sm:gap-3 flex-nowrap">
                             {categories.map((cat) => {
                                 const isActive = activeCategory === cat.key;
@@ -172,10 +175,10 @@ export default function EventsPage() {
                     </div>
                 </motion.div>
 
-                {/* Spacer so content clears the fixed tab bar (~64px tall) */}
-                <div className="h-16" />
+                {/* Spacer so content clears the fixed tab bar (~48px on mobile, 64px on larger) */}
+                <div className="h-12 sm:h-16" />
 
-                <div className="container mx-auto px-6 lg:px-12 max-w-[1400px] py-16 lg:py-24">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-[1400px] py-10 sm:py-16 lg:py-24">
 
 
                     {/* Events List */}

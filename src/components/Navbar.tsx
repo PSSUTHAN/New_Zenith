@@ -53,7 +53,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "py-4 bg-cyan-950/40 backdrop-blur-2xl border-b border-cyan-400/20 shadow-lg shadow-black/40" : "py-6 bg-transparent"
         }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 flex items-center justify-between">
         <Link to="/#home" className="text-3xl font-bold tracking-normal flex items-center gap-2 hover:scale-105 transition-transform duration-300">
           <span className="text-slate-100 uppercase drop-shadow-[0_0_10px_rgba(245,158,11,0.3)]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>ZENITH <span className="text-amber-500 tracking-tight ml-1 text-2xl">2K26</span></span>
         </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-cyan-950 border-t border-cyan-800 overflow-hidden shadow-xl"
           >
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 py-6 flex flex-col gap-4">
               {navLinks.map((link) => {
                 const sectionName = link.href.startsWith("/#") ? link.href.substring(2) : "events";
                 const isActive = activeSection === sectionName || (location.pathname === "/events" && link.href === "/events");

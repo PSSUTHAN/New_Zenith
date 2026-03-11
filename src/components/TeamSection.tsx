@@ -27,7 +27,7 @@ export default function TeamSection() {
             <div className="absolute top-0 left-1/4 w-[300px] sm:w-[400px] md:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] bg-amber-500/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[300px] sm:w-[400px] md:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] bg-cyan-500/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] pointer-events-none" />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+            <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 relative z-10">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -23,14 +23,14 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 md:pb-20 overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center w-full">
+      <div className="container mx-auto px-2 xs:px-3 sm-phone:px-4 sm:px-6 lg:px-12 text-center w-full">
         <motion.div
           style={{ opacity }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-3 sm:px-4 py-1.5 mb-4 sm:mb-6 text-xs sm:text-sm font-semibold tracking-wider text-amber-500 uppercase bg-amber-500/10 rounded-full border border-amber-400/20 backdrop-blur-sm">
+          <span className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 mb-4 sm:mb-6 text-sm sm:text-base md:text-lg lg:text-xl font-semibold tracking-wider text-amber-500 uppercase bg-amber-500/10 rounded-full border border-amber-400/20 backdrop-blur-sm">
             National Level Technical Symposium
           </span>
 
@@ -39,8 +39,8 @@ export default function Hero() {
           </div>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 mb-6 sm:mb-8 md:mb-10 leading-relaxed px-2 sm:px-0">
-            Unleash your potential at the most awaited technical fest of the year.
-            Join us for a day of innovation, competition, and excellence.
+            <div>Where IT innovation, AI intelligence and Cyber Security unite </div>
+                  A celebration of technology, creativity and excellence.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10 md:mb-12 text-xs sm:text-sm md:text-base flex-wrap">
@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-cyan-800" />
             <div className="flex items-center gap-2 text-slate-200 font-medium">
               <Smile className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" />
-              <span>8:30 AM onwards</span>
+              <span>09:00 AM onwards</span>
             </div>
             <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-cyan-800" />
             <div className="flex items-center gap-2 text-slate-200 font-medium">

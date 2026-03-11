@@ -63,12 +63,12 @@ export default function Timeline() {
   return (
     <div ref={containerRef} className="relative max-w-4xl mx-auto px-2 sm:px-4 py-6 sm:py-10">
       {/* Background Dim Vertical Line */}
-      <div className="absolute left-3 sm:left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-cyan-900 -translate-x-1/2 hidden md:block" />
+      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-cyan-900 -translate-x-1/2" />
 
       {/* Active Glowing Vertical Line */}
       <motion.div
         style={{ height: lineHeight }}
-        className="absolute left-3 sm:left-4 md:left-1/2 top-0 w-1 bg-gradient-to-b from-amber-500 via-cyan-400 to-amber-500 -translate-x-1/2 hidden md:block rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)] z-0 origin-top"
+        className="absolute left-4 md:left-1/2 top-0 w-1 bg-gradient-to-b from-amber-500 via-cyan-400 to-amber-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)] z-0 origin-top"
       />
 
       <div className="space-y-8 sm:space-y-10 md:space-y-12">
@@ -108,7 +108,7 @@ export default function Timeline() {
             />
 
             {/* Content Card */}
-            <div className={`w-full md:w-[45%] pl-8 sm:pl-10 md:pl-0 ${index % 2 === 0 ? "md:pr-12 text-left md:text-right" : "md:pl-12 text-left"
+            <div className={`w-full md:w-[45%] pl-10 sm:pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-12 text-left md:text-right" : "md:pl-12 text-left"
               }`}>
               <motion.div
                 whileHover={{ scale: 1.05, rotateX: index % 2 === 0 ? 2 : -2, rotateY: index % 2 === 0 ? -2 : 2 }}
