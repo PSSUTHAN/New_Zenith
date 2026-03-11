@@ -160,7 +160,7 @@ export default function Home() {
                         className="max-w-4xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-8 border-cyan-800"
                     >
                         <img
-                            src="/Posters/General-Final.jpeg"
+                            src="/Posters/General.jpeg"
                             alt="Zenith 2k26 Official Poster"
                             className="w-full h-auto transition-all duration-700"
                             referrerPolicy="no-referrer"
